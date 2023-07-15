@@ -1,9 +1,16 @@
 import React, { memo } from 'react'
-import Home from '@/views/Home'
+import { useRoutes } from 'react-router-dom'
+import routes from './router'
 
 const App = memo(() => {
   return (
-    <div><Home /></div>
+    <div className='app'>
+      <div className='header'>header</div>
+      <div className='page'>
+        {useRoutes(routes)}
+      </div>
+      <div className='footer'>footer</div>
+    </div>
   )
 })
 
